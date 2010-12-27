@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="ja">
+
+    <title>Router sample</title>
+
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="jquery.Router.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <h1>Router sample</h1>
+    <div id="output"></div>
+    <p><a href="index.html">goto index.html</a></p>
+    <pre>
+$.route(
+  {
+    path: /(index\.html|\/)$/,
+    func: function() {
+      $("#output").html("this is index.html");
+    }
+  },
+
+  {
+    path: /index2\.html$/,
+    func: function() {
+      $("#output").html("this is index2.html");
+    }
+  }
+);
+    </pre>
+  </body>
+</html>
