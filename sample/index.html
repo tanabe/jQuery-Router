@@ -11,29 +11,28 @@
     <meta http-equiv="content-style-type" content="text/css">
     <script type="text/javascript" src="jquery-1.4.3.min.js"></script>
     <script type="text/javascript" src="jquery.Router.js"></script>
-    <script type="text/javascript">
-    $.route(
-      {
-        //always match
-        path: /./,
-        func: function() {
-          console.log($("h1").text());
-        }
-      },
-
-      {
-        //url contains /sample/index.html
-        path: /\/sample\/index\.html/,
-        func: function() {
-          console.log($("h2").text());
-        }
-      }
-    );
-    </script>
-
+    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <h1>Router sample</h1>
-    <h2>this is h2</h2>
+    <div id="output"></div>
+    <p><a href="index2.html">goto index2.html</a></p>
+    <pre>
+$.route(
+  {
+    path: /(index\.html|\/)$/,
+    func: function() {
+      $("#output").html("this is index.html");
+    }
+  },
+
+  {
+    path: /index2\.html$/,
+    func: function() {
+      $("#output").html("this is index2.html");
+    }
+  }
+);
+    </pre>
   </body>
 </html>
