@@ -7,7 +7,7 @@
         //http://example.com/foo/bar/baz.html
         path: /./,
         func: function() {
-          console.log("boo!");
+          console.log("always match!");
         }
       },
 
@@ -16,7 +16,7 @@
         //http://example.com/foo/bar/sample/index.html
         path: /\/sample\/index\.html/,
         func: function() {
-          console.log("sample boo!");
+          console.log("sample page!");
         }
       }
     );
