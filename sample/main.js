@@ -2,6 +2,7 @@ $.route(
   {
     path: /(index\.html|\/)$/,
     func: function() {
+      $("#output").css("color", "red");
       $("#output").html("this is /index.html or /");
     }
   },
@@ -9,6 +10,7 @@ $.route(
   {
     path: /index2\.html$/,
     func: function() {
+      $("#output").css("color", "red");
       $("#output").html("this is /index2.html");
     }
   }
