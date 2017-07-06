@@ -1,6 +1,6 @@
-#URL routing jQuery plugin
+# URL routing jQuery plugin
 ---
-##usage
+## usage
     $.route(
       {
         //always match
